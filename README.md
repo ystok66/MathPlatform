@@ -1,31 +1,24 @@
 # AI-Assisted Elementary Math Olympiad Practice
 
-> **License:** Free for noncommercial personal learning, research and teaching. Commercial use requires prior written authorization from **ystok66**. [English terms](LICENSE.md) | [中文许可](LICENSE.zh-CN.md). Third-party dependencies and question-bank content retain their own rights. This is a source-available, noncommercial project, not an OSI-approved open-source release.
+English | [Chinese guide](README.zh-CN.md)
 
-> **授权：**非商业个人学习、研究和教学可免费使用；收费培训、商业产品和付费服务等商业使用须事先获得 **ystok66** 书面授权。题库原文与第三方内容不因本软件许可获得再分发授权。商业授权请通过项目 Issue 联系。
-
-**AI 辅助小学奥数练习平台**
+> **License:** Free for noncommercial personal learning, research and teaching. Commercial use requires prior written authorization from **ystok66**. [English terms](LICENSE.md) | [Chinese license](LICENSE.zh-CN.md). Third-party dependencies and question-bank content retain their own rights. This is a source-available, noncommercial project, not an OSI-approved open-source release.
 
 > **LANGUAGE CANDIDATE, NOT FULLY ACCEPTED.** Known failures and NOT_RUN cases remain. This banner supersedes the older validation claims below. Do not replace the accepted release. See [acceptance evidence](docs/LANGUAGE_ACCEPTANCE_REPORT.md) and [language settings](docs/LANGUAGE_SETTINGS.md).
 
-> **语言候选包，尚未全功能验收通过。** 下方旧版本验收说明不代表本候选包已通过。问题、失败与未测项目以上述验收报告为准。
-
-
 ![Main interface with the task center and workspace navigation](docs/images/interface-overview.jpg)
 
-*Main interface / 主界面: workspace navigation and the task center in the local demonstration installation.*
+*Main interface: workspace navigation and the task center in the local demonstration installation.*
 
 ![Product overview: choose questions, practise, learn from mistakes, check transfer, review evidence, and plan the next steps](docs/images/overview.svg)
 
-*Overview illustration / 功能总览示意图: a learning workflow, not a screenshot or a claim of measured learning outcomes.*
+*Overview illustration: a learning workflow, not a screenshot or a claim of measured learning outcomes.*
 
 **An AI-assisted elementary math olympiad practice platform with a searchable question bank, reviewed question generation, targeted revision, and learning reports.**
 
 **Who it is for:** elementary (primary-school) learners practising math olympiad and competition-style reasoning, supported by parents or teachers. Star ratings indicate problem difficulty, not school grade; choose questions to match the learner's current foundations. `MathPlatform` remains the internal application and executable name.
 
-**适用对象：**小学阶段进行奥数与数学竞赛思维训练的学生，以及辅助学习的家长和教师。星级表示题目难度，不对应年级，应按学生当前基础选题。`MathPlatform` 保留为内部目录和程序名称。
-
-## At a glance | 功能要点与设计目的
+## At a glance
 
 | Feature | Why it exists |
 | --- | --- |
@@ -40,7 +33,7 @@
 | A portable desktop distribution and first-run API setup | Let users copy a complete folder, start the app, and select provider-advertised models rather than typing model IDs. |
 | English and Chinese interfaces | Support different language preferences while retaining original imported question content. |
 
-**设计目的：**把“找题、练习、纠错、再练、看报告、安排下一轮练习”连接起来，减少家长管理题目、参数和历史记录的成本。AI 用于需要解释、生成和归纳的环节；确定性的判分、任务状态、权限确认和数据保护仍由程序负责。它是辅助学习工具，不是保证题目永远正确的自动裁判，也不是多人在线教学平台。
+**Design purpose:** Connect question discovery, practice, learning from mistakes, transfer checks, reports and the next practice plan while reducing administration for parents and teachers. AI supports generation and explanation; deterministic code remains responsible for rule-based grading, task state, permissions and data protection. This is a learning aid, not an infallible judge or a multi-user online teaching platform.
 
 ## Contents
 
@@ -57,7 +50,7 @@
 - [Troubleshooting](#troubleshooting)
 - [Developer and maintainer notes](#developer-and-maintainer-notes)
 - [Testing boundaries and known limitations](#testing-boundaries-and-known-limitations)
-- [中文使用指南](#中文使用指南)
+- [Chinese guide](README.zh-CN.md)
 
 ## Release status and choosing a download
 
@@ -181,7 +174,7 @@ When reopening an existing setup, role overrides are retained by default. If you
 > **About the screenshots:** captured from an isolated local demonstration installation. The example practice contains three unattempted questions, not a child's learning record. Existing source-bank questions retain their original Chinese text even when the interface is English. These images show controls and navigation, not successful paid AI calls or completed end-to-end tests. The first-run connection image below comes from an earlier local mock-provider test.
 
 <details>
-<summary>Question bank: browse tags, filters, question lists, and question details / 题库筛选界面</summary>
+<summary>Question bank: browse tags, filters, question lists, and question details</summary>
 
 ![Question-bank workspace with tag filters, a question list, and the selected question](docs/images/question-bank.jpg)
 
@@ -204,7 +197,7 @@ The application is local and primarily intended for a single household/operator,
 ### Four practice modes
 
 <details>
-<summary>Regular practice: selection controls, learning tools, and the question queue / 普通练习</summary>
+<summary>Regular practice: selection controls, learning tools, and the question queue</summary>
 
 ![Regular practice showing filters, answer entry, assistance tools, and the three-question queue](docs/images/practice.jpg)
 
@@ -213,7 +206,7 @@ The application is local and primarily intended for a single household/operator,
 </details>
 
 <details>
-<summary>Strict-test setup: question count and custom star proportions / 严格测试比例</summary>
+<summary>Strict-test setup: question count and custom star proportions</summary>
 
 ![Expanded strict-test settings showing question count and custom proportions across five star levels](docs/images/strict-test-settings.jpg)
 
@@ -268,7 +261,7 @@ Generation prompts require structured solution steps, understandable elementary 
 ### Generating a set
 
 <details>
-<summary>Generation workspace: tags, stars, concurrency, reuse, and budget / 批量出题参数</summary>
+<summary>Generation workspace: tags, stars, concurrency, reuse, and budget</summary>
 
 ![Question-set generation form with a number-theory tag, difficulty settings, concurrency controls, and a budget summary](docs/images/generation.jpg)
 
@@ -292,7 +285,7 @@ An operation may create multiple candidates and ask the reviewer to select an ac
 ### Similar questions from one or several originals
 
 <details>
-<summary>History review: choose originals and build a similar-question basket / 历史跨组选择</summary>
+<summary>History review: choose originals and build a similar-question basket</summary>
 
 ![History review with selectable questions and a basket for batch similar-question generation](docs/images/history-review.jpg)
 
@@ -544,56 +537,8 @@ This release preparation has a separate [validation and limitations record](docs
 
 Cold API startup can lag behind the browser and may temporarily show a local-service error until readiness refresh. First-run discovery requires a compatible provider endpoint. Source-bank language and older records can differ from the current UI language. AI quality and provider availability remain variable.
 
-## 中文使用指南
-
-### 这个项目适合做什么？
-
-适合家长、教师或学生在本地管理小学奥数与数学竞赛练习：按题源、星级和标签找题，日常做题，生成新套题，对错题做类似题，再结合报告安排下一轮练习。星级不对应年级，选题应结合学生当前基础。严格测试用于减少辅助干扰的测评；普通练习用于学习，不应把二者成绩直接混为一谈。
-
-### Windows 用户下载后怎么运行？
-
-1. 下载完整的 `MathPlatform-Windows.zip`，不要只下载 GitHub 源码 ZIP。
-2. 解压整个 `math-platform` 文件夹到可写目录。
-3. 双击 `StartMathPlatform.exe`，或者 `START_HERE.cmd`。这两个入口运行的是同一套软件。
-4. 等待本地服务就绪，填写 API URL 和 Key，获取模型列表，选择模型，进行实际调用测试，再保存。
-5. 暂时没有 API 时，可以选择跳过，用已有题库练习；需要 AI 的功能仍需要有效服务商配置。
-
-不需要额外安装 Python 或 Node。必须保留 `api`、`web`、`launcher`、`data`、`prompts` 等整个文件夹；单独的 EXE 不包含题库。换电脑前先停止服务并备份，API Key 在新电脑上可能需要重新填写。
-
-### 苹果电脑怎么办？
-
-M 系列选 `arm64`，Intel Mac 选 `x86_64`。目标成品是解压后双击 `MathPlatform.app`，不用用户安装 Python、Node 或 Homebrew。**当前本地准备仅提供 Mac 原生构建流程，还没有生成并实机验收这两种 Mac 成品包。**必须先让 GitHub Actions 的对应构建和短测通过，再发布下载。
-
-### 推荐的完整使用顺序
-
-1. 选择学习者；进入题库或练习页，按星级、题源、标签和是否做过筛题。
-2. 创建练习，按每题的格式说明填写答案；有必要时填写自己的思路。
-3. 普通练习中可以使用提示题、看答案、解答讲解或题目质疑。严格测试不提供这些学习辅助。
-4. 用上一题、下一题和题号导航连续做题；不要把生成套题等同于已经开始做题。
-5. 在历史页查看整组、错题或薄弱题；可以跨组加入类似题选择篮子，也可以取消选中。
-6. 在报告页搜索并选择 Session 或 Batch，不必从别处抄写 ID。没有作答的数据不能证明学生已经掌握。
-7. 让项目 AI 助手解释报告、整理薄弱点、拟定下一轮出题参数；确认之后才启动相应操作。
-
-### 提示题和类似题有什么区别？
-
-提示题是当前学习过程中的临时辅助，关注学生可能没有理解的环节，不是把原题答案换一种说法直接告诉学生。类似题/掌握检测是换一个表面不同、核心能力相近的新问题，用来检查能否独立迁移。两者的保存用途、学习证据和生成流程不能混用。
-
-### 为什么出题有时很快，有时失败很多次？
-
-启用复用时，未做过的合格 AI 题可以直接填入套题，不必再次调用生成模型。新生成则需要候选、审核、重试等步骤。“要 20 题”表示希望得到 20 道合格题，不等于只发 20 次 API。失败/拒绝次数应结合每个 slot 的具体原因、预算和模型配置来看，不能只靠提高并发解决。
-
-### 卡住时怎么处理？
-
-先看任务中心是排队还是运行；不需要的任务可以取消。界面数据旧时点刷新，状态异常时点“修复异常状态”。API 本身连不上时，先用本文件夹的 `check.cmd` 诊断，再用 `stop.cmd` 和启动入口重启。常规恢复无效后才考虑高级 AI 诊断；它不是任意修改程序的管理员。已发出的外部请求仍可能收费，取消不是退款。
-
-### 什么不能随便公开？
-
-不要把自己使用后的 `.env`、数据库、学生自由文本、日志或备份直接上传 GitHub。公开源码应来自脱敏后的 `repository`；运行包应使用干净构建的 ZIP。题目原文的版权需要另行确认，不能因为软件是本地项目就默认题库可以公开传播。
-
 Screenshots retained from the earlier public demonstration are illustrative; they are not visual acceptance evidence for this repair candidate. Private acceptance screenshots are not included.
 
-## Independent UI and AI languages | 独立语言设置
+## Independent UI and AI languages
 
 The interface defaults to English. AI output follows the interface unless you choose English or Chinese separately. Language switching never translates old bank questions or automatically regenerates reports. New requests and queued tasks retain their submitted output language. See docs/LANGUAGE_SETTINGS.md for the shared catalog and API contract.
-
-界面默认英文；AI 输出可跟随界面或单独选择英文、中文。切换语言不会翻译旧题或自动重新生成报告。后台任务保留提交时的语言快照。新增语言的接入边界和仍待迁移项见语言说明。
