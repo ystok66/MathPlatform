@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.example/schemas/question_v2.schema.json",
+  "title": "QuestionV2",
+  "type": "object",
+  "required": ["schema_version", "id", "version", "status", "source", "content", "answer_spec", "solution", "taxonomy", "evaluation", "verification", "dedupe", "provenance"],
+  "properties": {
+    "schema_version": {"const": "question_v2"},
+    "id": {"type": "string", "minLength": 1},
+    "version": {"type": "integer", "minimum": 1},
+    "status": {"enum": ["draft", "needs_review", "verified", "approved", "rejected"]},
+    "source": {"type": "object"},
+    "content": {
+      "type": "object",
+      "required": ["stem_md", "answer_type", "language", "assets"],
+      "properties": {
+        "stem_md": {"type": "string", "minLength": 1},
+        "answer_type": {"enum": ["integer", "rational", "decimal", "expression", "multi_blank", "choice", "set", "open_response"]},
+        "language": {"type": "string"},
+        "assets": {"type": "array"}
+      }
+    },
+    "answer_spec": {
+      "type": "object",
+      "required": ["canonical", "accepted_forms", "order_sensitive", "normalization"],
+      "properties": {
+        "canonical": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "accepted_forms": {"type": "array", "items": {"type": "string"}},
+        "tolerance": {"type": ["number", "object", "null"]},
+        "unit": {"type": ["string", "null"]},
+        "order_sensitive": {"type": "boolean"},
+        "normalization": {"type": "array", "items": {"type": "string"}},
+        "raw": {"type": "object"}
+      }
+    },
+    "solution": {"type": "object"},
+    "taxonomy": {"type": "object"},
+    "evaluation": {"type": "object"},
+    "verification": {"type": "object"},
+    "dedupe": {"type": "object"},
+    "provenance": {"type": "object"},
+    "created_at": {"type": ["string", "null"]}
+  }
+}

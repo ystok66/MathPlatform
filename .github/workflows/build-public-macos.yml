@@ -1,0 +1,65 @@
+name: Build macOS portable packages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    name: macOS ${{ matrix.arch }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-15
+            arch: arm64
+          - runner: macos-15-intel
+            arch: x86_64
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install build-only dependencies
+        timeout-minutes: 5
+        run: python -m pip install -r apps/api/requirements.txt 'pyinstaller==6.22.3'
+      - name: Build portable app with bounded phases
+        timeout-minutes: 20
+        run: python scripts/pack/build_public_macos.py --arch ${{ matrix.arch }}
+      - name: Prepare disposable smoke copy
+        run: python scripts/pack/smoke_public_macos.py prepare --release out/math-platform-macos-${{ matrix.arch }} --copy out/smoke-${{ matrix.arch }}
+      - name: Start separately
+        run: python scripts/pack/smoke_public_macos.py start --release out/math-platform-macos-${{ matrix.arch }} --copy out/smoke-${{ matrix.arch }}
+      - name: Health check (30 seconds maximum)
+        run: python scripts/pack/smoke_public_macos.py health --release out/math-platform-macos-${{ matrix.arch }} --copy out/smoke-${{ matrix.arch }}
+      - name: Doctor separately
+        run: python scripts/pack/smoke_public_macos.py doctor --release out/math-platform-macos-${{ matrix.arch }} --copy out/smoke-${{ matrix.arch }}
+      - name: Stop only this copy
+        if: always()
+        run: python scripts/pack/smoke_public_macos.py stop --release out/math-platform-macos-${{ matrix.arch }} --copy out/smoke-${{ matrix.arch }}
+      - name: Upload only after successful smoke
+        uses: actions/upload-artifact@v4
+        with:
+          name: MathPlatform-macOS-${{ matrix.arch }}
+          path: |
+            out/MathPlatform-macOS-${{ matrix.arch }}.zip
+            out/MathPlatform-macOS-${{ matrix.arch }}.zip.sha256
+          if-no-files-found: error
+          retention-days: 30
+      - name: Preserve build diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: macOS-build-logs-${{ matrix.arch }}
+          path: out/macos-logs-${{ matrix.arch }}
+          if-no-files-found: ignore
+          retention-days: 14

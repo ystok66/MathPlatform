@@ -1,0 +1,11 @@
+.i18nBar { position: relative; z-index: 80; display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 8px 16px; padding: 8px clamp(12px, 3vw, 40px); border-bottom: 1px solid #cbd5d1; background: #f5f8f6; color: #183e37; font: inherit; }
+.i18nControl { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.i18nLabel { margin-right: 6px; font-size: 13px; font-weight: 650; }
+.i18nControl button { min-height: 36px; min-width: 72px; padding: 5px 12px; border: 1px solid #9aafa8; border-radius: 7px; background: #fff; color: #183e37; font: inherit; font-size: 14px; cursor: pointer; }
+.i18nControl button[aria-pressed="true"] { background: #0f6457; color: #fff; border-color: #0f6457; }
+.i18nControl button:focus-visible { outline: 3px solid #b84c1d; outline-offset: 2px; }
+.i18nStorageWarning { font-size: 12px; max-width: 42ch; }
+.i18nControl select { min-height: 36px; max-width: 190px; border: 1px solid #9aafa8; border-radius: 7px; padding: 5px 10px; background: #fff; color: #183e37; font: inherit; font-size: 14px; }
+.i18nControl select:focus-visible { outline: 3px solid #b84c1d; outline-offset: 2px; }
+@media (max-width: 560px) { .i18nBar { justify-content: center; padding: 6px 10px; } .i18nLabel { font-size: 12px; } }
+@media print { .i18nBar { display: none; } }

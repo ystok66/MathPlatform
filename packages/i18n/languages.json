@@ -1,0 +1,8 @@
+{
+  "schema_version": "language_registry_v1",
+  "default_language": "en",
+  "languages": [
+    {"code": "en", "native_name": "English", "name": "English", "direction": "ltr", "enabled": true},
+    {"code": "zh-CN", "native_name": "中文", "name": "Simplified Chinese", "direction": "ltr", "enabled": true}
+  ]
+}

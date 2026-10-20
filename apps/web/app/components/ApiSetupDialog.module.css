@@ -1,0 +1,31 @@
+.dialog { width: min(620px, calc(100vw - 28px)); max-height: min(90dvh, 920px); padding: 0; border: 1px solid #cbd5ce; border-radius: 20px; color: #19372f; background: linear-gradient(150deg, #f3f8ef 0%, #fffefa 45%, #f5faf7 100%); box-shadow: 0 28px 100px #102d3140; }
+.dialog::backdrop { background: #142e3d99; backdrop-filter: blur(3px); }
+.body { padding: clamp(20px, 4vw, 32px); }
+.body h2 { font-size: clamp(26px, 5vw, 36px); margin: 10px 0; letter-spacing: -.025em; }
+.body p { line-height: 1.6; margin: 8px 0 16px; }
+.body small { display: block; color: #50655d; font-size: 12px; line-height: 1.6; }
+.top, .footer, .languages { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.top { justify-content: space-between; }
+.badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+.body button { cursor: pointer; border: 1px solid #b4c9bc; border-radius: 9px; background: #ffffffbf; color: #244b3d; padding: 10px 14px; font: inherit; font-size: 13px; }
+.body button:disabled { opacity: .5; cursor: not-allowed; }
+.body button:focus-visible, .fields input:focus-visible, .fields select:focus-visible { outline: 3px solid #c28a39; outline-offset: 2px; }
+.body .close { padding: 6px; display: inline-flex; border: 0; background: transparent; }
+.languages { margin-top: 12px; }
+.languages button { padding: 5px 10px; }
+.languages button[aria-pressed="true"] { background: #e0efe5; border-color: #507b62; }
+.steps { display: flex; gap: 8px; list-style: none; padding: 0; margin: 20px 0; flex-wrap: wrap; }
+.steps li { flex: 1; min-width: 110px; border-top: 3px solid #dce4dc; padding-top: 8px; font-size: 12px; color: #50655d; }
+.steps li[data-done="true"] { border-color: #367151; color: #215c3c; }
+.fields { display: grid; gap: 9px; border: 0; margin: 0; padding: 0; min-width: 0; }
+.fields label { font-size: 13px; font-weight: 650; margin-top: 8px; }
+.fields input:not([type="checkbox"]), .fields select { width: 100%; box-sizing: border-box; padding: 11px 12px; border: 1px solid #bdccc1; border-radius: 8px; background: #fff; color: #19372f; min-width: 0; font: inherit; font-size: 14px; }
+.fields .checkbox { display: flex; gap: 9px; align-items: flex-start; line-height: 1.5; }
+.checkbox input { margin-top: 4px; }
+.body .primary { background: #245e45; color: #fff; border-color: #245e45; }
+.feedback { overflow-wrap: anywhere; }
+.feedback p { padding: 12px; border-radius: 9px; margin: 16px 0 0; font-size: 13px; }
+.success { background: #e1f1e5; color: #215c3c; }
+.error { background: #fff0e7; color: #913c22; }
+.footer { justify-content: flex-end; margin: 20px 0 12px; }
+@media (max-width: 440px) { .footer button { flex: 1; } .badge { font-size: 10px; } }

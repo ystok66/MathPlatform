@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="860" viewBox="0 0 1440 860" role="img" aria-labelledby="title desc">
+  <title id="title">AI-Assisted Elementary Math Olympiad Practice: the learning loop</title>
+  <desc id="desc">Choose questions, practise, learn from mistakes, check transfer through similar questions, review evidence, then plan the next practice. Reviewed generation, controlled tools and recoverable tasks support the loop.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#d5ddd4"/></pattern>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 9 4.5 0 9Z" fill="#446851"/></marker>
+    <style>
+      text{font-family:'Segoe UI',sans-serif;fill:#243b32}.eyebrow{font-size:17px;font-weight:700;letter-spacing:3px}.title{font-family:Georgia,serif;font-size:49px}.sub{font-size:22px;fill:#56685e}.num{font-size:17px;font-weight:700;letter-spacing:2px;fill:#55715e}.heading{font-size:28px;font-weight:650}.body{font-size:21px;fill:#56685e}.tag{font-size:17px;fill:#375744}.line{fill:none;stroke:#446851;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1440" height="860" rx="28" fill="#f5f4eb"/>
+  <rect width="1440" height="860" rx="28" fill="url(#grid)"/>
+  <rect x="58" y="48" width="9" height="113" rx="4" fill="#b96c43"/>
+  <text class="eyebrow" x="88" y="70">AI-ASSISTED / ELEMENTARY MATH OLYMPIAD / EN + ZH</text>
+  <text class="title" x="86" y="128">From questions to understanding.</text>
+  <text class="sub" x="88" y="171">One workspace for practice, reviewed AI generation, revision and learning evidence.</text>
+  <path class="line" d="M470 333H507"/><path class="line" d="M918 333H955"/>
+  <path class="line" d="M1181 420V464"/>
+  <path class="line" d="M966 572H929"/><path class="line" d="M518 572H481"/>
+  <path d="M58 572H28V333H47" class="line" stroke-dasharray="7 7"/>
+  <g>
+    <rect x="58" y="238" width="412" height="190" rx="19" fill="#fffefa" stroke="#cbd7cb"/>
+    <text class="num" x="84" y="274">01 / FIND THE RIGHT START</text>
+    <text class="heading" x="84" y="318">Choose questions</text>
+    <text class="body" x="84" y="357">Stars, sources, concepts and tags</text>
+    <text class="body" x="84" y="388">Bank filters or reviewed AI sets</text>
+    <rect x="506" y="238" width="412" height="190" rx="19" fill="#fffefa" stroke="#cbd7cb"/>
+    <text class="num" x="532" y="274">02 / WORK AT YOUR PACE</text>
+    <text class="heading" x="532" y="318">Practise</text>
+    <text class="body" x="532" y="357">Daily practice and history review</text>
+    <text class="body" x="532" y="388">Strict tests with restricted help</text>
+    <rect x="966" y="238" width="416" height="190" rx="19" fill="#fffefa" stroke="#cbd7cb"/>
+    <text class="num" x="992" y="274">03 / MAKE ERRORS USEFUL</text>
+    <text class="heading" x="992" y="318">Learn from mistakes</text>
+    <text class="body" x="992" y="357">Hint questions and solution steps</text>
+    <text class="body" x="992" y="388">Answer review and concerns</text>
+    <rect x="966" y="478" width="416" height="190" rx="19" fill="#e8efe5" stroke="#b7c9b6"/>
+    <text class="num" x="992" y="514">04 / TRY A DIFFERENT PROBLEM</text>
+    <text class="heading" x="992" y="558">Check transfer</text>
+    <text class="body" x="992" y="597">Similar questions / mastery checks</text>
+    <text class="body" x="992" y="628">Single-question or cross-group sets</text>
+    <rect x="506" y="478" width="412" height="190" rx="19" fill="#e8efe5" stroke="#b7c9b6"/>
+    <text class="num" x="532" y="514">05 / LOOK BEYOND THE SCORE</text>
+    <text class="heading" x="532" y="558">Review evidence</text>
+    <text class="body" x="532" y="597">Session and batch report selectors</text>
+    <text class="body" x="532" y="628">Mistakes, assistance and progress</text>
+    <rect x="58" y="478" width="412" height="190" rx="19" fill="#e8efe5" stroke="#b7c9b6"/>
+    <text class="num" x="84" y="514">06 / DECIDE WHAT COMES NEXT</text>
+    <text class="heading" x="84" y="558">Plan next steps</text>
+    <text class="body" x="84" y="597">Report-informed parameter drafts</text>
+    <text class="body" x="84" y="628">Review and confirm assistant actions</text>
+  </g>
+  <rect x="58" y="716" width="1324" height="91" rx="17" fill="#284b3e"/>
+  <text x="84" y="751" style="font-size:17px;font-weight:700;letter-spacing:2px;fill:#e6e8ce">SHARED GUARDRAILS</text>
+  <text x="84" y="783" style="font-size:21px;fill:#ffffff">Reviewed generation</text>
+  <text x="381" y="783" style="font-size:21px;fill:#ffffff">Visible queues + cancellation</text>
+  <text x="779" y="783" style="font-size:21px;fill:#ffffff">Controlled AI tools</text>
+  <text x="1088" y="783" style="font-size:21px;fill:#ffffff">Local records + backups</text>
+  <text x="58" y="839" style="font-size:16px;fill:#64736a">Workflow illustration, not a screenshot. AI services are optional and may incur provider charges.</text>
+</svg>

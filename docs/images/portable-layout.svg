@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="730" viewBox="0 0 1440 730" role="img" aria-labelledby="title desc">
+  <title id="title">Keep the complete Math Platform folder together</title>
+  <desc id="desc">The launcher starts a bundled local web service and API. The question bank, learner records and prompts live beside the executables. Optional AI calls reach the user's selected external provider. An EXE alone does not contain the question bank.</desc>
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 9 4.5 0 9Z" fill="#55735f"/></marker>
+    <style>text{font-family:'Segoe UI',sans-serif;fill:#253c32}.title{font-family:Georgia,serif;font-size:41px}.h{font-size:25px;font-weight:650}.b{font-size:21px;fill:#54695d}.small{font-size:18px;fill:#54695d}.label{font-size:16px;font-weight:700;letter-spacing:2px}.arrow{fill:none;stroke:#55735f;stroke-width:3;marker-end:url(#a)}</style>
+  </defs>
+  <rect width="1440" height="730" rx="24" fill="#f5f4eb"/>
+  <text class="label" x="54" y="53">PORTABLE PACKAGE / LOCAL DATA / OPTIONAL CLOUD AI</text>
+  <text class="title" x="54" y="108">Copy the folder. Not just the launcher.</text>
+  <rect x="44" y="145" width="1041" height="464" rx="22" fill="#fffefa" stroke="#b7cbb9" stroke-width="2"/>
+  <text class="label" x="70" y="179">YOUR EXTRACTED MATH-PLATFORM FOLDER</text>
+  <rect x="73" y="212" width="267" height="166" rx="15" fill="#e7ede2"/>
+  <text class="h" x="95" y="253">Launcher</text>
+  <text class="b" x="95" y="293">Windows: EXE or CMD</text>
+  <text class="b" x="95" y="325">Mac: native .app build</text>
+  <text class="small" x="95" y="355">Start / stop / diagnostics</text>
+  <path class="arrow" d="M343 295H380"/>
+  <rect x="392" y="212" width="286" height="166" rx="15" fill="#edf1ed"/>
+  <text class="h" x="415" y="253">web/</text>
+  <text class="b" x="415" y="293">Interface + Node runtime</text>
+  <text class="b" x="415" y="325">Opens in your browser</text>
+  <text class="small" x="415" y="355">Loopback-only local service</text>
+  <path class="arrow" d="M682 295H719"/>
+  <rect x="731" y="212" width="325" height="166" rx="15" fill="#edf1ed"/>
+  <text class="h" x="754" y="253">api/</text>
+  <text class="b" x="754" y="293">API + Python runtime</text>
+  <text class="b" x="754" y="325">Grading, tasks and permissions</text>
+  <text class="small" x="754" y="355">No separate runtime installation</text>
+  <path class="arrow" d="M893 383V418"/>
+  <rect x="73" y="433" width="489" height="139" rx="15" fill="#f3ecdf"/>
+  <text class="h" x="95" y="472">prompts/ + packages/ + configuration</text>
+  <text class="b" x="95" y="510">Role prompts, schemas and supporting guides</text>
+  <text class="small" x="95" y="545">Keep these resources beside the runtime.</text>
+  <rect x="586" y="433" width="470" height="139" rx="15" fill="#e2ecde"/>
+  <text class="h" x="609" y="472">data/</text>
+  <text class="b" x="609" y="510">Question bank + learning records + reports</text>
+  <text class="small" x="609" y="545">Back up before moving, upgrading or restoring.</text>
+  <path class="arrow" d="M1060 295H1120" stroke-dasharray="7 6"/>
+  <rect x="1135" y="212" width="258" height="285" rx="18" fill="#e8edf0" stroke="#c2cfd2"/>
+  <text class="label" x="1157" y="249">OPTIONAL / EXTERNAL</text>
+  <text class="h" x="1157" y="291">Your AI provider</text>
+  <text class="b" x="1157" y="331">Your URL and API key</text>
+  <text class="b" x="1157" y="367">Selected task context</text>
+  <text class="b" x="1157" y="403">Provider billing applies</text>
+  <text class="small" x="1157" y="456">Local-first does not mean</text>
+  <text class="small" x="1157" y="480">all AI processing is offline.</text>
+  <text x="54" y="657" style="font-size:23px;font-weight:650;fill:#944d31">The question bank is in data/math_platform_dev.db, not inside a single EXE.</text>
+  <text class="small" x="54" y="695">Architecture illustration. Mac packages require a completed native build; this diagram is not evidence of Mac validation.</text>
+</svg>

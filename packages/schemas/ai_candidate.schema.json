@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.example/schemas/ai_candidate.schema.json",
+  "title": "AIGeneratedCandidate",
+  "type": "object",
+  "required": ["status", "candidate_id", "question", "verification_spec", "self_checks"],
+  "properties": {
+    "status": {"enum": ["ok", "reject"]},
+    "candidate_id": {"type": "string"},
+    "reject_reason": {"type": ["string", "null"]},
+    "design_summary": {"type": "object"},
+    "question": {"type": "object"},
+    "verification_spec": {"type": "object"},
+    "self_checks": {"type": "object"}
+  }
+}

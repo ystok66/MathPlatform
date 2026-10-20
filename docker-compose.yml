@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: math-platform-postgres
+    environment:
+      POSTGRES_DB: math_platform
+      POSTGRES_USER: math
+      POSTGRES_PASSWORD: math
+    ports:
+      - "5432:5432"
+    volumes:
+      - math_postgres_data:/var/lib/postgresql/data
+  redis:
+    image: redis:7
+    container_name: math-platform-redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  math_postgres_data:
