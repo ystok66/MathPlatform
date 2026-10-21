@@ -4,11 +4,9 @@
 
 > **授权：**非商业个人学习、研究和教学可免费使用；收费培训、商业产品及付费服务等商业使用须事先取得 **ystok66** 书面授权。[中文许可证](LICENSE.zh-CN.md) | [英文许可证](LICENSE.md)。第三方依赖和题库原文保留各自权利，商业授权请通过项目 Issue 联系。
 
-> **语言候选包，尚未全功能验收通过。** 旧版通过说明不代表当前候选包全面通过。请以 [验收报告](docs/LANGUAGE_ACCEPTANCE_REPORT.md) 中的问题、失败和未测项目为准。不要直接替换已验收的正式版本。
-
 ![主界面与任务中心](docs/images/interface-overview.jpg)
 
-*截图来自演示环境，用于介绍界面，不构成本候选包的验收证据。*
+*截图来自演示环境，用于介绍界面，不构成本次发布的新增验收证据。*
 
 ![从选题、练习、纠错到报告和下一轮学习的功能总览](docs/images/overview.svg)
 
@@ -35,7 +33,7 @@
 
 ### Windows 用户下载后怎么运行？
 
-1. 下载完整的 `MathPlatform-Windows.zip`，不要只下载 GitHub 源码 ZIP。
+1. 在 [GitHub Releases](https://github.com/ystok66/MathPlatform/releases) 下载完整的 `MathPlatform-Windows-Language-Candidate.zip`。开发者可选 `MathPlatform-Source-Language-Candidate.zip`；源码 ZIP 不是可直接运行的软件。
 2. 解压整个 `math-platform` 文件夹到可写目录。
 3. 双击 `StartMathPlatform.exe`，或者 `START_HERE.cmd`。这两个入口运行的是同一套软件。
 4. 等待本地服务就绪，填写 API URL 和 Key，获取模型列表，选择模型，进行实际调用测试，再保存。
@@ -45,7 +43,7 @@
 
 ### 苹果电脑怎么办？
 
-M 系列选 `arm64`，Intel Mac 选 `x86_64`。目标成品是解压后双击 `MathPlatform.app`，不用用户安装 Python、Node 或 Homebrew。**当前本地准备仅提供 Mac 原生构建流程，还没有生成并实机验收这两种 Mac 成品包。**必须先让 GitHub Actions 的对应构建和短测通过，再发布下载。
+M 系列选 `arm64`，Intel Mac 选 `x86_64`。目标成品是解压后双击 `MathPlatform.app`，不用用户安装 Python、Node 或 Homebrew。**当前发布仅提供 Mac 原生构建流程，还没有生成并实机验收这两种 Mac 成品包。**必须先让 GitHub Actions 的对应构建和短测通过，再发布下载。
 
 ### 推荐的完整使用顺序
 
@@ -111,4 +109,8 @@ M 系列选 `arm64`，Intel Mac 选 `x86_64`。目标成品是解压后双击 `M
 
 ## 当前发布状态
 
-本指南拆分没有运行功能测试、收费 API、重新打包或 Mac 云构建。ZIP 是否包含本次文档改动，应以对应的打包记录为准；不得把文档更新当成新的验收结果。
+Windows 运行包和源码包已通过 [GitHub Releases](https://github.com/ystok66/MathPlatform/releases) 发布。下载对应 ZIP 及同名 `.sha256` 校验文件，按 Release 页面标注的版本和发布状态使用。当前没有可下载的 Mac 成品包。
+
+## 测试范围与已知限制
+
+当前测试覆盖、已知失败及未执行项目记录在 [验收报告](docs/LANGUAGE_ACCEPTANCE_REPORT.md)。发布 Release 或更新 README 不等于新增全功能验收结果。历史通过记录只适用于对应测试范围；请先备份自己的数据，再试用新版本。

@@ -4,8 +4,6 @@ English | [Chinese guide](PUBLIC_README.zh-CN.md)
 
 > **License:** Free for noncommercial personal learning, research and teaching. Commercial use requires prior written authorization from **ystok66**. [English terms](../LICENSE.md) | [Chinese license](../LICENSE.zh-CN.md). Third-party dependencies and question-bank content retain their own rights. This is a source-available, noncommercial project, not an OSI-approved open-source release.
 
-> **LANGUAGE CANDIDATE, NOT FULLY ACCEPTED.** Known failures and NOT_RUN cases remain. This banner supersedes the older validation claims below. Do not replace the accepted release. See [acceptance evidence](../docs/LANGUAGE_ACCEPTANCE_REPORT.md) and [language settings](../docs/LANGUAGE_SETTINGS.md).
-
 ![Main interface with the task center and workspace navigation](../docs/images/interface-overview.jpg)
 
 *Main interface: workspace navigation and the task center in the local demonstration installation.*
@@ -54,16 +52,16 @@ English | [Chinese guide](PUBLIC_README.zh-CN.md)
 
 ## Release status and choosing a download
 
-This README describes the public-release preparation updated on **2026-10-17**.
+**Downloads:** Windows and source packages are available on the [GitHub Releases page](https://github.com/ystok66/MathPlatform/releases). Choose `MathPlatform-Windows-Language-Candidate.zip` for the ready-to-run Windows application or `MathPlatform-Source-Language-Candidate.zip` for development. Matching `.sha256` files are provided for both archives. Follow the version and release label shown on that page.
 
 | Distribution | Intended user | Entry point | Current evidence |
 | --- | --- | --- | --- |
-| Windows x64 portable ZIP | Normal Windows users, including Intel and AMD x64 PCs | `StartMathPlatform.exe` or `START_HERE.cmd` | Built; isolated startup, first-run UI, mock-provider flow and one real provider call tested. |
+| Windows x64 portable ZIP | Normal Windows users, including Intel and AMD x64 PCs | `StartMathPlatform.exe` or `START_HERE.cmd` | Packaged; see the acceptance report for tested coverage and current limitations. |
 | Repository source / GitHub source ZIP | Developers and maintainers | Build scripts | Source only; not the ready-to-run application. |
 | macOS Apple Silicon (`arm64`) | M-series Mac users | `MathPlatform.app` | Native build workflow supplied; no completed native build or Mac runtime test in this local preparation. |
 | macOS Intel (`x86_64`) | Intel Mac users | `MathPlatform.app` | Native build workflow supplied; no completed native build or Mac runtime test in this local preparation. |
 
-**Do not confuse a prepared build workflow with a finished Mac download.** Mac packages must first be built successfully on the corresponding macOS runner. This preparation has not uploaded a repository or published a GitHub Release.
+**Do not confuse a prepared build workflow with a finished Mac download.** Mac packages must first be built successfully on the corresponding macOS runner. Windows and source assets are distributed through GitHub Releases; native Mac archives are not included in this release.
 
 The Windows CMD and EXE entries start **the same application and the same local database**. They are two entry methods, not different feature editions. `StartMathPlatform.exe` is a small launcher, not an installer containing the entire question bank.
 
@@ -71,7 +69,7 @@ For end users, download the appropriate **Release asset**, not GitHub's **Code >
 
 ## Windows quick start
 
-1. Extract `MathPlatform-Windows.zip` to a normal writable folder, for example `C:\MathPlatform\math-platform`.
+1. Extract `MathPlatform-Windows-Language-Candidate.zip` to a normal writable folder, for example `C:\MathPlatform\math-platform`.
 2. Keep the entire extracted directory together.
 3. Double-click `StartMathPlatform.exe`. Alternatively, double-click `START_HERE.cmd`.
 4. Wait for the local services to become ready. The app opens in your browser.
@@ -529,7 +527,7 @@ Generator and reviewer roles are separate. Structured solutions are part of the 
 
 ## Testing boundaries and known limitations
 
-This release preparation has a separate [validation and limitations record](../docs/PUBLIC_RELEASE_VALIDATION.md).
+The [acceptance report](../docs/LANGUAGE_ACCEPTANCE_REPORT.md) records current test coverage, known failures and untested cases. Earlier smoke-test evidence is retained in the [validation and limitations record](../docs/PUBLIC_RELEASE_VALIDATION.md). Historical passing results apply only to their stated scope. Publishing a Release or updating this README does not constitute a new full-function acceptance test.
 
 **Observed on the isolated Windows package:** frontend build/check, API packaging, the new EXE entry, service status/doctor/stop, first-run opening, English/Chinese switching, model discovery/search/select, rejecting empty replies, successful mock calls, invalidating a test after key edits, saving and browser-refresh persistence. One real `gpt-5.6-sol` call succeeded after discovery of 112 advertised models. Only that selected model was called; the other models were not tested.
 
@@ -537,7 +535,7 @@ This release preparation has a separate [validation and limitations record](../d
 
 Cold API startup can lag behind the browser and may temporarily show a local-service error until readiness refresh. First-run discovery requires a compatible provider endpoint. Source-bank language and older records can differ from the current UI language. AI quality and provider availability remain variable.
 
-Screenshots retained from the earlier public demonstration are illustrative; they are not visual acceptance evidence for this repair candidate. Private acceptance screenshots are not included.
+Screenshots retained from the earlier public demonstration are illustrative; they are not visual acceptance evidence for this release. Private acceptance screenshots are not included.
 
 ## Independent UI and AI languages
 
